@@ -1,3 +1,6 @@
 # uts_pemweb
 
-Meskipun pakai custom domain, tugas ini tetap saya upload dan deploy di Github Pages kok, bukan pakai hosting sendiri XD
+Create (+search): create_mahasiswa.php
+Read: create_mahasiswa.php
+Update: update_mahasiswa.php
+Delete: delete_mahasiswa.php
