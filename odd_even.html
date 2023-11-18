@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+        <meta charset="UTF-8">
+        <!-- Meta Tag Viewport -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Rayhan Ahmad | Hitung Ganjil dan Genap</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <img class="header-img" src="https://uploads.codesandbox.io/uploads/user/df846677-75e8-48fb-bcbc-15f93eff48a7/-oVn-image.jpg" alt="wilif wilof wilai">
+            <div class="header-text">
+                <h1>Rayhan Ahmad Rizalullah</h1>
+                <p>NIM: 121140002</p>
+            </div>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="https://www.itera.ac.id" target="_blank">Kampus Saya</a></li>
+                <li><a href="https://github.com/ray-ahmad" target="_blank">Github Saya</a></li>
+                <li><a href="https://www.instagram.com/rayhanahmadr/" target="_blank">Instagram Saya</a></li>
+            </ul>
+        </nav>
+        <div class="wrap">
+            <main class="content">
+                <section class="container">
+                    <h2>Menghitung Bilangan Ganjil dan Genap</h2>
+                    <p>Praktikum PemWeb RA Pertemuan 4</p>
+                        <div class="row">
+                            <label for="number">Masukkan bilangan bulat positif</label>
+                            <input type="number" id="number" name="number" placeholder="Masukkan bilangan bulat positif...">
+                        </div>
+                        <div class="row">
+                            <button onclick="hitungGanjilGenap()">Hitung</button>
+                        </div>
+                    <span id="hasil" style="display: none; margin-top: 10px;">
+                        <div id="hasil_judul">Hasil:</div>
+                        <div id="hasil_odd"></div>
+                        <div id="hasil_even"></div>
+                    </span>
+                </section>
+            </main>
+            <aside class="sidebar">
+                <section class="container menu">
+                    <h2>Link</h2>
+                    <ul>
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="./form.html">Form</a></li>
+                        <li><a href="./table.html">Tabel</a></li>
+                        <li><a href="#" class="active">Hitung Bilangan Ganjil Genap</a></li>
+                        <li><a href="./crud_lite.html">Manajemen Buku</a></li>
+                        <li><a href="./dom_profile.html">DOM Profile</a></li>
+                    </ul>
+                </section>
+            </aside>
+        </div>
+        <footer>
+            <p>&copy; 2023 Rayhan Ahmad Rizalullah</p>
+        </footer>
+        <script>
+            function hitungGanjilGenap(){
+                let num = document.getElementById('number').value;
+                if (isNaN(num) || num <= 0) {
+                    alert("Masukkan hanya bilangan bulat positif.");
+                    return;
+                }
+
+                let sum_odd = 0;
+                let sum_even = 0;
+                for(let i = 1; i<=num; i++){
+                    if(i % 2==0){
+                        sum_even++;
+                    }
+                    else{
+                        sum_odd++;
+                    }
+                }
+                let hasil_span = document.getElementById('hasil');
+                let hasil_odd = document.getElementById('hasil_odd');
+                let hasil_even = document.getElementById('hasil_even');
+
+                hasil_odd.innerHTML = "Jumlah bilangan ganjil: "+sum_odd;
+                hasil_even.innerHTML = "Jumlah bilangan genap: "+sum_even;
+                
+                hasil_span.style.display = "block";
+            }
+        </script>
+    </body>
+</html>

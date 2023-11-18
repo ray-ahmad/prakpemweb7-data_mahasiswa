@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+        <meta charset="UTF-8">
+        <!-- Meta Tag Viewport -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Rayhan Ahmad | DOM Profile</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <img class="header-img" id="header_image" src="https://uploads.codesandbox.io/uploads/user/df846677-75e8-48fb-bcbc-15f93eff48a7/-oVn-image.jpg" alt="wilif wilof wilai">
+            <div class="header-text">
+                <h1 id="full_name">Rayhan Ahmad Rizalullah</h1>
+                <p>NIM: <span id="nim">121140002</span></p>
+                <p>Praktikum PemWeb Kelas <span id="kelas-1">RA</span></p>
+            </div>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="https://www.itera.ac.id" target="_blank">Kampus Saya</a></li>
+                <li><a href="https://github.com/ray-ahmad" target="_blank">Github Saya</a></li>
+                <li><a href="https://www.instagram.com/rayhanahmadr/" target="_blank">Instagram Saya</a></li>
+            </ul>
+        </nav>
+        <div class="wrap">
+            <main class="content">
+                <section class="container tentang">
+                    <h2>DOM Profile</h2>
+                    <p>Tugas Praktikum PemWeb <span id="kelas-2">RA</span> Pertemuan 5</p>
+                    <hr style="margin: 10px 0px;">
+                    <h3>Perkenalkan, saya <span id="nickname">Rayhan</span></h3>
+                    <p id="bio">Seorang mahasiswa ITERA yang lagi kebanjiran tubes, berharap semua tubesnya dilancarkan, cepet selesai, dan hasil yang bagus.</p>
+                    <h3>Video kesukaan gwehj</h3>
+                    <iframe class="video" style="display: block;" src="https://www.youtube.com/embed/xuCn8ux2gbs" title="history of the entire world, i guess" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <hr style="margin: 10px 0px;">
+                    <p>Kalau aku like aku like</p>
+                    <p>Kalau tak</p>
+                    <div class="row horizontal-button">
+                        <button id="swipe_profile">Aku Swipe</button>
+                        <button id="gak_tau">Gak Tau</button>
+                    </div>
+                </section>
+            </main>
+            <aside class="sidebar">
+                <section class="container menu">
+                    <h2>Link</h2>
+                    <ul>
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="./form.html">Form</a></li>
+                        <li><a href="./table.html">Tabel</a></li>
+                        <li><a href="./odd_even.html">Hitung Bilangan Ganjil Genap</a></li>
+                        <li><a href="./crud_lite.html">Manajemen Buku</a></li>
+                        <li><a href="#" class="active">DOM Profile</a></li>
+                    </ul>
+                </section>
+            </aside>
+        </div>
+        <footer>
+            <p>&copy; 2023 Rayhan Ahmad Rizalullah</p>
+        </footer>
+        <script>
+            let header_images = ['https://uploads.codesandbox.io/uploads/user/df846677-75e8-48fb-bcbc-15f93eff48a7/JG_e-image-addin.jpg','https://uploads.codesandbox.io/uploads/user/df846677-75e8-48fb-bcbc-15f93eff48a7/8kvn-image-leo.jpg','https://uploads.codesandbox.io/uploads/user/df846677-75e8-48fb-bcbc-15f93eff48a7/-oVn-image-rayhan.jpg'];
+            let full_names = ['Muhammad Addin','Leonardo Alfontus Mende Sirait','Rayhan Ahmad Rizalullah'];
+            let nims = ['12114024','121140028','121140002'];
+            let nicknames = ['Addin','Leo','Rayhan'];
+            let kelases = ['RE','RF','RA'];
+            let bios = ['Anyeong haseo yeorobun... Aku orang paling ganteng se-Asia Tenggara','Salam tobat, jauhi maksiat, agar kita masuk surga sahabat. Amin, amin amin...','Seorang mahasiswa ITERA yang lagi kebanjiran tubes, berharap semua tubesnya dilancarkan, cepet selesai, dan hasil yang bagus.'];
+
+            let index_bio = 0;
+            let index_yt = 0;
+            
+            let swipe_profile = document.getElementById('swipe_profile');
+            let gak_tau = document.getElementById('gak_tau');
+
+            swipe_profile.onclick = function(){
+                document.getElementById('header_image').src = header_images[index_bio];
+                document.getElementById('full_name').innerHTML = full_names[index_bio];
+                document.getElementById('nim').innerHTML = nims[index_bio];
+                document.getElementById('nickname').innerHTML = nicknames[index_bio];
+                document.getElementById('kelas-1').innerHTML = kelases[index_bio];
+                document.getElementById('kelas-2').innerHTML = kelases[index_bio];
+                document.getElementById('bio').innerHTML = bios[index_bio];
+                if (index_bio == 2)
+                    index_bio = 0;
+                else
+                    index_bio++;
+            }
+            gak_tau.onclick = function(){
+                alert('Semua Manusia di Bumi Bingung, Gak Bingung Kalau Udah di Surga');
+            }
+        </script>
+    </body>
+</html>

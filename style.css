@@ -1,0 +1,266 @@
+*{
+    margin:0;
+    padding:0;
+    font-family:'Poppins',Tahoma, sans-serif;
+}
+
+body{
+    background-color: #DBE2EF;
+    line-height: 1.5;
+}
+
+header{
+    padding: 20px;
+    background-color: #112D4E;
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    align-items: center;
+}
+
+.header-img{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 100%;
+}
+
+.header-text{
+    color:white;
+    margin:25px;
+}
+
+nav{
+    background-color: #3F72AF;
+    display:flex;
+    justify-content: flex-end;
+    padding: 10px 14px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+}
+
+nav ul li{
+    padding: 0px 5px;
+    list-style:none;
+    display:inline-block;
+}
+nav ul li:hover{
+    background-color: #112D4E;
+    padding: 0px 5px;
+    list-style:none;
+    display:inline-block;
+}
+
+.wrap{
+    display: inline-block;
+    width: 100%;
+}
+
+.content{
+    margin: 0;
+    width: 65%;
+    float: left;
+}
+
+.sidebar{
+    margin: 0;
+    width: 35%;
+    float: right;
+}
+.container{
+    margin: 20px;
+    padding: 20px;
+    background-color: #F9F7F7;
+}
+
+.menu ul li{
+    list-style: none;
+    text-align: center;
+}
+.menu a {
+    display: block;
+    color: white;
+    background-color: #3F72AF;
+    transition: background-color 0.3s;
+    padding: 16px;
+    margin: 5px 0px;
+    text-decoration: none;
+}
+
+.menu a.active {
+    background-color: #112D4E;
+    color: white;
+}
+
+.menu a:hover:not(.active) {
+    background-color: #DBE2EF;
+    transition: background-color 0.3s;
+    color: black;
+}
+.table-overlay{
+    overflow-x:overlay;
+}
+
+.alert-box{
+    background-color: #dbefe4;
+    text-align: justify;
+    padding: 15px;
+    margin-bottom: 10px;
+}
+
+table{
+    width: 100%;
+    min-width: 1000px;
+}
+
+#data-pemweb7{
+    min-width: 700px;
+}
+
+table td{
+    padding: 5px;
+}
+
+table, td, th, td{
+    border-collapse: collapse;
+    border: 2px solid black;
+}
+
+tr{
+    text-align: center;
+}
+
+tr:nth-child(odd):not(.header-table) {
+    background-color: #DBE2EF;
+}
+tr:nth-child(even):not(.header-table) {
+    background-color: #dbefe4;
+}
+
+.header-table{
+    background-color: #3F72AF;
+    color:white;
+}
+
+.header-table th{
+    padding: 10px;
+}
+
+.tentang{
+    text-align: center;
+}
+
+.tentang>p, .tentang>h2, .tentang>h3{
+    text-align: justify;
+}
+
+iframe{
+    min-width: 250px;
+    width:80%;
+    height: 300px;
+}
+
+/* Style untuk halaman form */
+input[type=text], input[type=number], input[type=email], input[type=password], input[type=date], select, textarea {
+    display: block;
+    width: 90%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+label {
+    display: block;
+    padding: 12px 12px 12px 0;
+}
+
+input[type=submit], button, .btn-primary {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: #3F72AF;
+    transition: background-color 0.3s;
+    color: white;
+    padding: 12px 15px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+}
+
+.btn-primary{
+    display: inline-block;
+}
+
+input[type=submit]:hover, button:hover, .btn-primary:hover {
+    background-color: #112D4E;
+    transition: background-color 0.3s;
+    -webkit-transition: background-color 0.3s;
+    -moz-transition: background-color 0.3s;
+    -ms-transition: background-color 0.3s;
+    -o-transition: background-color 0.3s;
+}
+
+/* Manajemen Buku */
+.book_list{
+    list-style: none;
+}
+.book_container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #DBE2EF;
+    padding: 15px;
+    margin: 15px 0px;
+}
+.search-button{
+    display: flex;
+    gap:10px;
+}
+/* Manajemen Buku */
+
+.horizontal-button{
+    display: flex;
+    gap:10px;
+}
+
+footer{
+    background-color: black;
+    padding:15px;
+    text-align: center;
+    color:white;
+}
+
+@media only screen and (max-width: 748px) {
+    body {
+        min-width: 350px;
+    }
+    header{
+        flex-direction:column;
+        text-align: center;
+    }
+    iframe{
+        width: 93%;
+        height: 280px;
+    }
+    .content{
+        width: 100%;
+    }
+    .sidebar{
+        width: 100%;
+    }
+    .boxes{
+        flex-direction: column;
+    }
+    .box{
+        width:100px;
+        height:100px;
+        background-color: #3F72AF;
+        color: white;
+        align-items: center;
+        justify-content: center;
+    }
+}
